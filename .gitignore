@@ -1,0 +1,9 @@
+.*.swp
+.project
+.cproject
+*.map
+*.elf
+*.bin
+*.hex
+*.o
+
