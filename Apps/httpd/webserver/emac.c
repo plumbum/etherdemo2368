@@ -401,7 +401,7 @@ unsigned short StartReadFrame(void) {
     unsigned int idx;
 
     idx = MAC_RXCONSUMEINDEX;
-    RxLen = (RX_STAT_INFO(idx) & RINFO_SIZE) - 3;
+    RxLen = (RX_STAT_INFO(idx) & RINFO_SIZE) - 3 + 4; // TODO stupid magic?
     rptr = (unsigned short *)RX_DESC_PACKET(idx);
     return(RxLen);
 }
